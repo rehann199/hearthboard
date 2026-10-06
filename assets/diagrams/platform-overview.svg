@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="t d">
+  <title id="t">Hearthboard platform overview</title>
+  <desc id="d">Two Flutter codebases: a mobile client for Android and iOS with home-screen widgets, and a separate Android TV client for ambient split-flap display. Both share backend services for auth, messaging, pairing and subscriptions. The TV app is engineered but not publicly released.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6ecff; }
+      .h { font-size: 26px; font-weight: 700; }
+      .s { font-size: 15px; fill: #9fb0d9; }
+      .b { font-size: 15px; }
+      .p { font-size: 13px; }
+      .k { font-size: 13px; fill: #8ea2d8; letter-spacing: 1.4px; font-weight: 700; }
+      .mob { fill: #12304a; stroke: #2f7fc1; stroke-width: 2; }
+      .tv  { fill: #3a2414; stroke: #d9822b; stroke-width: 2; }
+      .sh  { fill: #1a2a55; stroke: #5b78d6; stroke-width: 2; }
+      .plat { fill: #0d1830; stroke: #3b5190; stroke-width: 1.2; }
+      .arrow { stroke: #5b78d6; stroke-width: 2; fill: none; }
+      .warn { fill: #4a3018; stroke: #c98a2e; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1200" height="640" rx="16" fill="#0b1020"/>
+  <text x="40" y="50" class="h">Hearth: mobile widgets plus an unreleased Android TV display</text>
+  <text x="40" y="76" class="s">Short split-flap messages to friends on the phone; optional living-room ambient board after QR pairing.</text>
+
+  <rect x="40" y="100" width="1120" height="108" rx="12" class="sh"/>
+  <text x="60" y="128" class="k">SHARED PRODUCT IDEAS</text>
+  <text x="60" y="158" class="b">Compose a short uppercase message, friends feed and partner board, reactions and themes</text>
+  <text x="60" y="184" class="b">Cloud auth and profiles, tiered send limits, TV pairing records, push when a message arrives</text>
+
+  <path d="M300 208 V248" class="arrow"/>
+  <path d="M900 208 V248" class="arrow"/>
+
+  <rect x="40" y="248" width="520" height="280" rx="12" class="mob"/>
+  <text x="60" y="276" class="k">MOBILE FLUTTER CLIENT, LIVE ON GOOGLE PLAY</text>
+  <rect x="60" y="292" width="155" height="40" rx="8" class="plat"/>
+  <text x="74" y="318" class="b p">Android phone / tablet</text>
+  <rect x="225" y="292" width="110" height="40" rx="8" class="plat"/>
+  <text x="238" y="318" class="b p">iOS (same app)</text>
+  <text x="60" y="360" class="b">Home-screen widget: pre-rendered board card per theme</text>
+  <text x="60" y="384" class="b">Scan QR or enter code to claim a TV, manage paired sets</text>
+  <text x="60" y="408" class="b">Background post queue, optimistic local-first sync</text>
+  <text x="60" y="432" class="b">Workmanager refresh, FCM-driven widget updates</text>
+  <text x="60" y="456" class="b">Subscriptions via in-app purchase bridges</text>
+  <text x="60" y="480" class="b">Provider view models, portrait shell navigation</text>
+  <text x="60" y="504" class="b">About 61,200 lines of Dart under lib/</text>
+
+  <rect x="580" y="248" width="580" height="280" rx="12" class="tv"/>
+  <text x="600" y="276" class="k">ANDROID TV FLUTTER FORK, NOT PUBLICLY RELEASED</text>
+  <rect x="600" y="292" width="130" height="40" rx="8" class="plat"/>
+  <text x="614" y="318" class="b p">Android TV, leanback</text>
+  <rect x="740" y="292" width="400" height="40" rx="8" class="warn"/>
+  <text x="754" y="318" class="b p">Engineering complete, no store listing in this showcase</text>
+  <text x="600" y="360" class="b">Shows QR for phone to claim, landscape ambient loop</text>
+  <text x="600" y="384" class="b">D-pad focus wrappers, owner header and board carousel</text>
+  <text x="600" y="408" class="b">Sleep / empty states, split-flap motion and sound</text>
+  <text x="600" y="432" class="b">Rewarded and banner ads SDK on TV build</text>
+  <text x="600" y="456" class="b">Shared repositories with mobile where paths align</text>
+  <text x="600" y="480" class="b">About 39,500 lines of Dart under lib/</text>
+  <text x="600" y="504" class="b">191 shared source paths, 53 byte-identical between forks</text>
+
+  <rect x="40" y="548" width="1120" height="72" rx="12" class="plat"/>
+  <text x="60" y="576" class="k">REMOTE SERVICES (BOTH CLIENTS)</text>
+  <text x="60" y="602" class="b">Firebase Auth, Firestore, Storage, Cloud Messaging, Analytics, Crashlytics, Performance, serverless push on new messages, image CDN uploads for widget previews</text>
+</svg>

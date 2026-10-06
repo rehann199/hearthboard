@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="t d">
+  <title id="t">Hearth message and widget update flow</title>
+  <desc id="d">Sender composes a short message, the app renders widget-sized board images, uploads them, writes the message to the cloud database, and notifies recipients. Receivers refresh the home-screen widget from cached images or push; paired TVs subscribe to the owner feed for ambient display.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6ecff; }
+      .h { font-size: 26px; font-weight: 700; }
+      .s { font-size: 15px; fill: #9fb0d9; }
+      .b { font-size: 15px; }
+      .k { font-size: 13px; fill: #8ea2d8; letter-spacing: 1.4px; font-weight: 700; }
+      .box { fill: #14283a; stroke: #3aa7a0; stroke-width: 1.5; }
+      .cloud { fill: #1a2a55; stroke: #5b78d6; stroke-width: 2; }
+      .arrow { stroke: #5b78d6; stroke-width: 2; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5b78d6"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" rx="16" fill="#0b1020"/>
+  <text x="40" y="50" class="h">From compose to widget and TV display</text>
+  <text x="40" y="76" class="s">The widget shows a bitmap of the same split-flap card used in the feed, not live Flutter layout on the home screen.</text>
+
+  <text x="40" y="116" class="k">SENDER PHONE</text>
+  <rect x="40" y="130" width="220" height="56" rx="10" class="box"/>
+  <text x="58" y="164" class="b">Compose short text</text>
+  <path d="M260 158 H320" class="arrow"/>
+  <rect x="320" y="130" width="240" height="56" rx="10" class="box"/>
+  <text x="338" y="156" class="b">Render card off-screen</text>
+  <text x="338" y="176" class="b">Android and iOS sizes</text>
+  <path d="M560 158 H620" class="arrow"/>
+  <rect x="620" y="130" width="220" height="56" rx="10" class="box"/>
+  <text x="638" y="164" class="b">Upload preview images</text>
+  <path d="M840 158 H900" class="arrow"/>
+  <rect x="900" y="130" width="260" height="56" rx="10" class="cloud"/>
+  <text x="918" y="164" class="b">Write message document</text>
+
+  <path d="M1030 186 V240" class="arrow"/>
+  <rect x="900" y="240" width="260" height="56" rx="10" class="cloud"/>
+  <text x="918" y="274" class="b">Serverless FCM notify</text>
+
+  <path d="M1030 296 V350" class="arrow"/>
+  <text x="40" y="340" class="k">RECEIVER</text>
+  <rect x="40" y="354" width="280" height="72" rx="10" class="box"/>
+  <text x="58" y="384" class="b">Push or poll, pick theme URL</text>
+  <text x="58" y="408" class="b">Download bitmap if needed</text>
+  <path d="M320 390 H380" class="arrow"/>
+  <rect x="380" y="354" width="260" height="72" rx="10" class="box"/>
+  <text x="398" y="384" class="b">Native home widget</text>
+  <text x="398" y="408" class="b">Android providers, iOS widget ext</text>
+
+  <path d="M1030 296 H700 V390 H640" class="arrow"/>
+  <rect x="380" y="454" width="340" height="72" rx="10" class="box"/>
+  <text x="398" y="484" class="b">Paired Android TV (unreleased)</text>
+  <text x="398" y="508" class="b">Streams owner boards, ambient loop</text>
+  <path d="M380 490 H320" class="arrow"/>
+  <rect x="40" y="454" width="280" height="72" rx="10" class="box"/>
+  <text x="58" y="484" class="b">Optional background work</text>
+  <text x="58" y="508" class="b">Refresh widget after delivery</text>
+</svg>
